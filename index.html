@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elon Musk Quiz</title>
+    <title>Self Analysis</title>
 </head>
 <body>
-    <header></header>
+    <!-- パンくずリスト -->
+    <header>
+        <div class="title">
+            <h1>Self Analysis</h1>
+        </div>
+    </header>
+    <main>
+        <div class="question_wrapper">
+            <div class="question">
+                <p id="category">category</p>
+                <h2 id="question">question</h2>
+            </div>
+        </div>
+        <div class="fact_wrapper">
+            <p>fact</p>
+            <textarea type="text" name="fact" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="abstract_wrapper">
+            <p>abstract</p>
+            <textarea onchange="" type="text" name="abstract" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="divert_wrapper">
+            <p>divert</p>
+            <textarea type="text" name="divert" id="" cols="30" rows="10"></textarea>
+        </div>
+
+        <input type="button" id="back" value="戻る">
+        <input type="button" id="next" value="次へ">
+    </main>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="./questions.js"></script>
+    <script> src="./exchange.js"</script>
 </body>
 </html>
