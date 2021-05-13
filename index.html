@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
     <title>Self Analysis</title>
 </head>
 <body>
     <!-- パンくずリスト -->
     <header>
-        <div class="title">
-            <h1>Self Analysis</h1>
+        <div id="particles-js"></div>
+        <div id="wrapper">
+            <div class="title">
+                <h1>Self Analysis</h1>
+            </div>
         </div>
     </header>
     <main>
@@ -20,25 +28,29 @@
                 <h2 id="question">question</h2>
             </div>
         </div>
-        <div class="fact_wrapper">
-            <p>fact</p>
-            <textarea type="text" name="fact" id="" cols="30" rows="10"></textarea>
+        <div class="form">
+            <div class="fact_wrapper f_wrapper">
+                <p>ファクト</p>
+                <textarea type="text" name="fact" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="abstract_wrapper f_wrapper">
+                <p>抽象化</p>
+                <textarea onchange="" type="text" name="abstract" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="divert_wrapper f_wrapper">
+                <p>転用</p>
+                <textarea type="text" name="divert" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="button_box">
+                <input type="button" id="back" value="戻る" class="button">
+                <input type="button" id="next" value="次へ" class="button">
+            </div>
         </div>
-        <div class="abstract_wrapper">
-            <p>abstract</p>
-            <textarea onchange="" type="text" name="abstract" id="" cols="30" rows="10"></textarea>
-        </div>
-        <div class="divert_wrapper">
-            <p>divert</p>
-            <textarea type="text" name="divert" id="" cols="30" rows="10"></textarea>
-        </div>
-
-        <input type="button" id="back" value="戻る">
-        <input type="button" id="next" value="次へ">
     </main>
     <footer></footer>
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script src="./questions.js"></script>
     <script> src="./exchange.js"</script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </body>
 </html>
