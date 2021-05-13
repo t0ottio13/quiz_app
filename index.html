@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
 </head>
     <title>Self Analysis</title>
 </head>
@@ -25,25 +24,33 @@
         <div class="question_wrapper">
             <div class="question">
                 <p id="category">category</p>
-                <h2 id="question">question</h2>
+                <h2 id="question">Q.なぜジーズアカデミーに通うのか？</h2>
             </div>
         </div>
         <div class="form">
             <div class="fact_wrapper f_wrapper">
-                <p>ファクト</p>
-                <textarea type="text" name="fact" id="" cols="30" rows="10"></textarea>
+                <p>理由</p>
+                <textarea type="text" name="reason"  cols="30" rows="10"></textarea>
             </div>
             <div class="abstract_wrapper f_wrapper">
-                <p>抽象化</p>
-                <textarea onchange="" type="text" name="abstract" id="" cols="30" rows="10"></textarea>
+                <p>目的</p>
+                <textarea  type="text" name="purpose"  cols="30" rows="10"></textarea>
             </div>
             <div class="divert_wrapper f_wrapper">
-                <p>転用</p>
-                <textarea type="text" name="divert" id="" cols="30" rows="10"></textarea>
+                <p>行動</p>
+                <textarea type="text" name="action"  cols="30" rows="10"></textarea>
             </div>
             <div class="button_box">
                 <input type="button" id="back" value="戻る" class="button">
+                <input type="button" id="save" value="保存" class="button">
                 <input type="button" id="next" value="次へ" class="button">
+            </div>
+        </div>
+        <div class="add_question_box">
+            <div class="add_question_wrapper">
+                <p>質問を追加</p>
+                <textarea type="text" name="add_question" id="" cols="30" rows="10"></textarea>
+                <input type="button" id="add" value="追加する" class="add_button">
             </div>
         </div>
     </main>
@@ -51,6 +58,5 @@
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script src="./questions.js"></script>
     <script> src="./exchange.js"</script>
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </body>
 </html>

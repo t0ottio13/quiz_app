@@ -35,6 +35,10 @@ header h1{
     font-size: 20px;
 }
 
+#category {
+    display: none;
+}
+
 .form {
     display: flex;
     align-items: center;
@@ -56,7 +60,7 @@ textarea {
 }
 
 .button_box{
-    width: 300px;
+    width: 500px;
     margin-top: 30px;
     display: flex;
     justify-content:space-evenly;
@@ -77,3 +81,25 @@ textarea {
     opacity: 1.0;
     color: black;
 }
+
+
+.add_question_box{
+    margin-top: 30px;
+}
+.add_question_wrapper p{
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+.add_button{
+    margin: 0 auto;
+    width:100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: ivory;
+    color: dimgray;
+    opacity: 0.8;
+}
+
+
