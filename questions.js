@@ -62,7 +62,8 @@ $('#save').on('click', ()=> {
         action: actionValue
     };
     setSave(data);
-    alert('保存しました');
+    $('#stamp').show();
+    // alert('保存しました');
 })
 
 // 次へボタンを押した時の処理
@@ -74,6 +75,7 @@ $('#next').on('click', () => {
     $('textarea[name="reason"]').val("");
     $('textarea[name="purpose"]').val("");
     $('textarea[name="action"]').val("");
+    $('#stamp').hide();
 });
 
 $('#back').on('click', () => {
@@ -84,5 +86,6 @@ $('#back').on('click', () => {
     $('textarea[name="reason"]').val("");
     $('textarea[name="purpose"]').val("");
     $('textarea[name="action"]').val("");
+    $('#stamp').hide();
 });
 
