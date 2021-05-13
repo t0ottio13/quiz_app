@@ -16,25 +16,37 @@ const questions = [
     '自分の夢と向き合うことで、何を得たいのか？'
 ];
 
+// 初期設定
 let count = 0;
 let saveItem = "";
-let savedItem = [];
+readItem();
 $('#category').text(category[count]);
 $('#question').text(questions[count]);
 
-function setSave(val) {
-    console.log(saveItem);
-    savedItem.push(val);
-    window.localStorage.setItem('key', JSON.stringify(savedItem));
-}
 
-$('#next').on('click', () => {
+
+// テキストのlocalStorageの値を読み込む
+function readItem(val){
     try {
-        saveItem = window.localStorage.getItem('key');
+        const i = window.localStorage.getItem(val);
+        saveItem = JSON.parse(i);
 
     } catch (error) {
         console.log(error);
     }
+}
+
+// テキストの値をlocalStorageに保存する。
+function setSave(val) {
+    console.log(saveItem);
+    saveItem.push(val);
+    console.log(saveItem);
+    window.localStorage.setItem('key', JSON.stringify(saveItem));
+}
+
+// 次へボタンを押した時の処理
+$('#next').on('click', () => {
+    readItem('key');
 
     const factValue = $('textarea[name="fact"]').val();
     const abstractValue = $('textarea[name="abstract"]').val();
@@ -45,9 +57,7 @@ $('#next').on('click', () => {
         abstract: abstractValue,
         divert: divertValue
     };
-    console.log(saveItem);
     setSave(data);
-
     count++;
     $('#category').text(category[count]);
     $('#question').text(questions[count]);
@@ -55,5 +65,14 @@ $('#next').on('click', () => {
     $('textarea[name="abstract"]').val("");
     $('textarea[name="divert"]').val("");
 });
+$('#back').on('click', () => {
+    count = count - 1;
+    console.log('OK');
+    $('#category').text(category[count]);
+    $('#question').text(questions[count]);
+    $('textarea[name="fact"]').val("");
+    $('textarea[name="abstract"]').val("");
+    $('textarea[name="divert"]').val("");
+})
 
 
